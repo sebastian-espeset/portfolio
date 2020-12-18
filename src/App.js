@@ -1,12 +1,17 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
 import './App.css';
+import Bio from '../src/components/Bio'
 
 function App() {
   
   return (
     <div>
-      <h1>Hello world</h1>
+      <header>
+        <h1>Seba E.</h1>
+        <h2>Portfolio</h2>
+      </header>
+      
+      <Bio/>
     </div>
   );
 }

@@ -12,14 +12,23 @@ main {
   padding: 72px 0;
   text-align: center;
 }
+header{
+  display:flex;
+  align-content: space-between;
+}
 h1 {
   font-size: 45px;
 }
 h2 {
   margin-top: 1.5em;
+
 }
 p {
-  font-size: 16px;
+  font-size: 24px;
+  max-width: 20%;
+}
+p:hover{
+  font-weight: 500;
 }
 a {
   border-bottom: 1px solid white;
