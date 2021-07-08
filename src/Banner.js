@@ -5,6 +5,7 @@ import {
   Typography,
   AppBar,
   CssBaseline,
+  Container,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import EmailIcon from "@material-ui/icons/Email";
@@ -14,24 +15,26 @@ import useStyles from "./styles";
 export default function Banner() {
   const classes = useStyles();
   return (
-    <div>
+    <>
       <CssBaseline />
       <AppBar position="relative" className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h2">
-              Sebastian Espeset
+        <Toolbar gutterBottom>
+          <Typography variant="h4">
+            Sebastian Espeset
+            </Typography>
+            <Container  align="right">
             <Tooltip title="Github">
-              <GitHubIcon className={classes.icon}/>
+              <GitHubIcon className={classes.icon} />
             </Tooltip>
             <Tooltip title="Email">
-              <EmailIcon className={classes.icon}/>
+              <EmailIcon className={classes.icon} />
             </Tooltip>
             <Tooltip title="Twitter">
-              <TwitterIcon className={classes.icon}/>
+              <TwitterIcon className={classes.icon} />
             </Tooltip>
-          </Typography>
+            </Container>
         </Toolbar>
       </AppBar>
-    </div>
+    </>
   );
 }
