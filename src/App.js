@@ -9,7 +9,6 @@ function App() {
     <div>
       <Banner></Banner>
       <Aboutme></Aboutme>
-      <Carosel></Carosel>
     </div>
   );
 }
