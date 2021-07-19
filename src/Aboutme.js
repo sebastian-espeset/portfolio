@@ -1,10 +1,9 @@
 import React from "react";
-import { Grid, Paper, Typography } from "@material-ui/core";
+import { Container,Typography } from "@material-ui/core";
 export default function Aboutme() {
   return (
-    <Grid container>
-      <Grid item>
-        <Typography>
+    <Container>
+        <Typography variant="section">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium
           urna sit amet tortor eleifend commodo. Morbi dictum mauris quam, vel
           cursus velit elementum id. Maecenas felis lacus, convallis vitae
@@ -53,7 +52,6 @@ export default function Aboutme() {
           Nullam euismod augue orci, ac porta ante rhoncus ut. Ut lobortis
           rutrum fringilla. Vestibulum interdum dolor ac est ultrices imperdiet.
         </Typography>
-      </Grid>
-    </Grid>
+    </Container>
   );
 }

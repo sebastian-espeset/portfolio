@@ -27,7 +27,7 @@ export default function Banner() {
   return (
     <>
       <CssBaseline />
-      <AppBar position="relative" className={classes.appBar}>
+      <AppBar position="relative" className={classes.appBar} gutterBottom>
         <Toolbar gutterBottom>
           <Typography variant="h4">Sebastian Espeset</Typography>
           <Container align="right">
