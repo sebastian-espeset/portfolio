@@ -6,7 +6,7 @@ import Projects from "./Projects";
 function App() {
 
   return (
-    <div>
+    <div >
       <Banner></Banner>
       <Aboutme></Aboutme>
       <Projects></Projects>

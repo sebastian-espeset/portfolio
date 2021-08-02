@@ -13,7 +13,9 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import EmailIcon from "@material-ui/icons/Email";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import useStyles from "./styles";
+import colors from "./styles";
 
+const soundCloudIcon=require("./soundcloud.png");
 export default function Banner() {
   const classes = useStyles();
   const history = useHistory();
@@ -28,11 +30,11 @@ export default function Banner() {
     <>
       <CssBaseline />
       <AppBar position="relative" className={classes.appBar} gutterBottom>
-        <Toolbar gutterBottom>
-          <Typography variant="h4">Sebastian Espeset</Typography>
-          <Container align="right">
+        <Toolbar>
+          <Typography width ="100%" variant="h5">Sebastian Espeset</Typography>
+          <Container align="right" maxWidth="md">
             <IconButton >
-              <Tooltip title="Github">
+              <Tooltip  title="Github">
                 <GitHubIcon
                   onClick={githubTab}
                   className={classes.icon}
@@ -48,6 +50,9 @@ export default function Banner() {
               <Tooltip title="Twitter">
                 <TwitterIcon onClick={twitterTab} className={classes.icon} />
               </Tooltip>
+            </IconButton>
+            <IconButton>
+              <img src={soundCloudIcon} className={classes.soundcloud}></img>
             </IconButton>
           </Container>
         </Toolbar>
