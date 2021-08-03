@@ -8,7 +8,7 @@ export default function Aboutme() {
   const classes=useStyles();
 
   return (
-    <Box className={classes.aboutMe} boxShadow={2}>
+    <Box className={classes.aboutMe}>
       <Typography variant="h5">
         Hey there. My name is Sebastian Espeset. I'm a recent graduate from Lambda School's full-stack web dev track.
       </Typography>

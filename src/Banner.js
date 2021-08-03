@@ -16,6 +16,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import MusicNote from "@material-ui/icons/MusicNote";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import InsertDriveFile from "@material-ui/icons/InsertDriveFile";
 import useStyles from "./styles";
 import colors from "./styles";
 
@@ -41,6 +42,9 @@ export default function Banner() {
   }
   function linkedInTab() {
     window.open(`https://www.linkedin.com/in/sebastian-espeset/`, "_blank");
+  }
+  function resumeTab() {
+    window.open(`https://docs.google.com/document/d/1Sz5S-GqNCi7XqDbFd_fVl4H6nDAComLUV0ElFIRfqOo/edit?usp=sharing`, "_blank");
   }
   return (
     <>
@@ -71,6 +75,11 @@ export default function Banner() {
             <IconButton>
               <Tooltip title="Email">
                 <EmailIcon className={classes.icon} />
+              </Tooltip>
+            </IconButton>
+            <IconButton>
+              <Tooltip title="Resume">
+                <InsertDriveFile onClick={resumeTab} className={classes.icon} />
               </Tooltip>
             </IconButton>
             <IconButton>

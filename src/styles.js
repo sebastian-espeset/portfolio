@@ -34,14 +34,11 @@ const useStyles = makeStyles((theme)=>({
     },
     projectImage:{
         width:"50%",
-        border:"2px solid black"
     },
     projectDescription:{
-        border:"2px solid black",
-        backgroundColor:"#f5cf6e",
+        
     },
     projectContainer:{
-        border:"2px solid black",
         maxWidth:"100%",
         display:"flex",
 
