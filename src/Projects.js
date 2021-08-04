@@ -11,12 +11,12 @@ const BlueTextTypography = withStyles({
 })(Typography);
 
 // TODO add clickable images which send viewer to hosted site or github repo
-// Figure out email situation.
+
+// Add responsiveness
 
 
 export default function Projects() {
   const classes = useStyles();
- 
   return (
     <>
       <Box marginTop="20px" marginLeft="47px">

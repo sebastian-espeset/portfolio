@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Redirect, useHistory } from "react-router-dom";
 import {
   Toolbar,
@@ -19,6 +20,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InsertDriveFile from "@material-ui/icons/InsertDriveFile";
 import useStyles from "./styles";
 import colors from "./styles";
+import EmailDialog from './EmailDialog';
 
 
 const theme = createTheme({
@@ -27,9 +29,30 @@ const theme = createTheme({
   },
 });
 
+// Build out modal for email form
+// Configure emailjs 
+
 export default function Banner() {
   const classes = useStyles();
   const history = useHistory();
+  const [emailOn,setEmailOn]=useState(false)
+  
+  const [formData,setFormData]=useState({
+    viewerName:"",
+    email:"",
+    message:""
+  });
+
+  const changeHandler=(e)=>{
+    e.preventDefault();
+    const {name, value}=e.target;
+    setFormData({
+      [name] : value
+    })
+  }
+  const handleEmailToggle=(e)=>{
+    setEmailOn(!emailOn)
+  }
 
   function githubTab() {
     window.open(`https://github.com/sebastian-espeset`, "_blank");
@@ -74,7 +97,7 @@ export default function Banner() {
             </IconButton>
             <IconButton>
               <Tooltip title="Email">
-                <EmailIcon className={classes.icon} />
+                <EmailIcon className={classes.icon} onClick={handleEmailToggle}/>
               </Tooltip>
             </IconButton>
             <IconButton>
@@ -90,6 +113,8 @@ export default function Banner() {
           </Container>
         </Toolbar>
       </AppBar>
+      { emailOn ? <EmailDialog visible={emailOn}></EmailDialog>:<></>}
     </>
   );
 }
+      

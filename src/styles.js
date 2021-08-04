@@ -42,6 +42,12 @@ const useStyles = makeStyles((theme)=>({
         maxWidth:"100%",
         display:"flex",
 
+    },
+    emailForm:{
+        position:"absolute",
+        float:"left",
+        left:"50%",
+        top:"50%",
     }
 }));
 
