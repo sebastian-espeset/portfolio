@@ -43,13 +43,7 @@ export default function Banner() {
     message:""
   });
 
-  const changeHandler=(e)=>{
-    e.preventDefault();
-    const {name, value}=e.target;
-    setFormData({
-      [name] : value
-    })
-  }
+
   const handleEmailToggle=(e)=>{
     setEmailOn(!emailOn)
   }
