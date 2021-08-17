@@ -42,6 +42,19 @@ const useStyles = makeStyles((theme)=>({
         maxWidth:"100%",
         display:"flex",
 
+    },
+    emailDiv:{
+        // Idk if i'm going to use this... seems fine without
+        position:"absolute",
+        float:"left",
+        left:"50%",
+        top:"50%",
+    },
+    emailForm:{
+        backgroundColor:"#f5cf6e",
+        display:"flex",
+        flexDirection:"column",
+        padding:"20px"
     }
 }));
 
